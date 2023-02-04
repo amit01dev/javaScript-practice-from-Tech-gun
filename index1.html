@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url("https://www.example.com/images/mars.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+form {
+  text-align: center;
+  margin: auto;
+  width: 500px;
+  padding: 50px;
+  border: 3px solid #f1f1f1;
+  background: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+input[type=text], input[type=email], input[type=tel], input[type=date], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+
+<form>
+  <div class="container">
+    <h1>Want to go to Mars?</h1>
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter your name" name="name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter your email" name="email" required>
+
+    <label for="tel"><b>Phone</b></label>
+    <input type="tel" placeholder="Enter your phone number" name="phone" required>
+
+    <label for="date"><b>Departure Date</b></label>
+    <input type="date" name="departure_date" required>
+
+    <label for="destination"><b>Destination</b></label>
+    <select name="destination" required>
+      <option value="">Select a destination</option>
+      <option value="mars">Mars</option>
+      <option value="moon">Moon</option>
+      <option value="jupiter">Jupiter</option>
+      <option value="saturn">Saturn</option>
+    </select>
+
+    <input type="submit" value="Submit">
+  </div>
+</form>
+
+</body>
+</html>
