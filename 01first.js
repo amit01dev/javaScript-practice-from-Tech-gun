@@ -10,7 +10,7 @@
 // var amit=('engineering');
 // alert(amit);
 
-// data types-----------------
+// data types----------------- 
 // var x= "hellow";
 // console.log(x);
 // var y= "he\"llow";
