@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- section -54 change css class ( do change with the help of css class) -->
+    <style>
+
+        .color{
+            background-color: aqua;
+            color: black;
+        }
+        .dim{
+            border: 2px solid red;
+            padding: 100px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <p id="intro" class = "color dim">This is dumy text !</p>
+    
+    <script>
+    // className ---****
+    
+    let new1 = document.getElementById("intro");
+        // this below className is the property which store the class.
+        // console.log(new1.className);
+
+        // if we want to add class through dynamically then we this below method----
+        // but in this method it remove all the classes and add "list 1" class only.
+     
+        // new1.className = ("list1");
+
+         // to add another classes without deleting the present class then we use ----->>>  += , it act as a concagnet operator and add one by one in the targeted class. but i don't understand completely.????
+
+        //  new1.className += (" list1");
+       
+        //  classList -----***
+        // we have another property in this, we can do this above same work with the help of classList()
+        
+        // it store all the class name in array ----
+        // console.log(new1.classList);
+
+        // if we want to print all the class one by one then we apply for loop b/c all the class name is store in an array ---
+        
+
+
+
+
+    </script>
+</body>
+</html>

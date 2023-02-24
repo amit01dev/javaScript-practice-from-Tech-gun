@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <li>home</li>
+    <li>product</li>
+    <li>gallery</li>
+    <li>contact</li>
+
+    <!-- <p>in this we are revised to some extended</p>
+    <ul id="list">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+    </ul> -->
+    
+    <script>
+        // i have to add one more li with this content ----> new list 5 
+
+        // let new1 = document.getElementById("list");
+        // let create = document.createElement("li");
+        // create.textContent = "new list 5";
+        // new1.appendChild(create);
+
+        // section -46 --- add new element before an element ( insert before)  ----***
+
+        // what append do is that -- apend add new element in the last , to add in the first position or in second position or any other position we use this below method----
+
+        // let new1 = document.getElementById("list");
+        // let create = document.createElement("li");
+        // create.textContent = "new list 5";
+        
+        // to give a reference position we create this ---
+        // let position = new1.firstElementChild;
+
+        // now we use the insertBefore function & it is taking two parameters one is the element which is created and the second is the reference position.
+        //  this is used to create a new element on the  first position.
+
+        // new1.insertBefore(create, position);
+
+        // if we want to create an element on second position then ---
+
+        // let position = new1.firstElementChild.nextElementSibling;
+        // new1.insertBefore(create, position);
+
+         // if we want to create an element on thrid position then ---
+
+        //  let position = new1.firstElementChild.nextElementSibling.nextElementSibling;
+        // new1.insertBefore(create, position);
+
+
+        // in above we add in the ul which act as a parent, but what if we want to add in the body ----****
+
+        // let parent = document.body;
+        // let create = document.createElement("h2");
+        // create.textContent = "This is h2 content";
+        
+        // let position = document.getElementById("list");
+        // parent.insertBefore(create, position);
+
+
+    </script>
+
+<!-- section -47 Remove child element*** -->
+
+<!-- <ul id="menu">
+    <li>home</li>
+    <li>product</li>
+    <li>gallery</li>
+    <li>contact</li>
+</ul> -->
+
+<Script>
+    // to remove a child element we need a parent if child is present in the body then body act as a parent.
+    // first we have to target parent---
+    // let parent = document.getElementById("menu");
+
+    // let childElement = parent.firstElementChild;
+
+    // // this below is the function --
+    // parent.removeChild(childElement);
+
+
+    // if we want to remove second position child then we use nextElementSibling -------***
+    // let parent = document.getElementById("menu");
+
+    // let childElement = parent.firstElementChild.nextElementSibling;
+
+    // // this below is the function --
+    // parent.removeChild(childElement);
+
+    // section 48 --- clone or copy element or/and child ----****
+
+    // let parent = document.getElementById("menu");
+    // let clone1 = parent.cloneNode(true);
+    // clone1.id = "mobile menu";
+
+    // if we don't write "true"  then it only clone the parent(ul ) not child (li)***
+
+    // let clone2 = parent.cloneNode();
+
+    // console.log(clone2);
+
+    // if we want to clone this parent -child into body then ---***
+
+    // let body1 = document.body;
+    // body1.appendChild(clone1);
+
+    // or 
+    // document.body.appendChild(clone1);
+
+
+    // but they both have the same id --- *** to change it we do this ----
+//  we give new id to the clone 1 variable when we define clone1 variable.
+
+
+</Script>
+
+
+<!-- section 49 --- Replacechild****
+    
+function or syntex --- parent.replaceChild(adding element , replacing element) -->
+
+ 
+     
+
+    <ul id="menu">
+        <li>home</li>
+        <li>product</li>
+        <li>gallery</li>
+        <li>contact</li>
+    </ul> 
+<Script>
+    // let parent1 = document.getElementById("menu");
+
+    // // now we create what we want to add ---
+    // let element1 = document.createElement("li");
+    // element1.textContent = "Service";
+
+    // // now we describe what we want to remove----
+    // let target1 = parent1.firstElementChild.nextElementSibling;
+    // parent1.replaceChild(element1 , target1);
+
+
+    // we can do this with body as a parent-----****
+    let body1 = document.body;
+
+    // this below is a component which we are going to add --
+    let adding = document.createElement("li");
+    adding.textContent = "service";
+
+    // this below is a component which we are going to replace ----
+    let target2 = body1.firstElementChild.nextElementSibling;
+
+    body1.replaceChild(adding, target2);
+    
+
+</Script>
+
+</body>
+</html>

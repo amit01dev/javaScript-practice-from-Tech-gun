@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- section -43 traversing element in js -->
+<!-- means we can select a parent with the help of child and make changes or we can select child with the help of parent and make changes -->
+
+<!-- <ul>
+    <li id="first">list1</li>
+    <li>list2</li>
+    <li>list3</li>
+</ul>
+
+<ul>
+    <li>list a</li>
+    <li>list b</li>
+    <li>list c</li> -->
+
+<!-- case -1 ***-->
+<!-- now we want to access ul and  change ul content with the help of id = "first" which is given to li -->
+
+<script>
+
+    // let change = document.getElementById("first");
+    // let intro = change.parentElement;
+     
+    // now in the intro we store ul, we can see it with console.log and we can manipulate the content inside of ul, if we  use intro.innerHTML = "hello" then it will erase all the li and add hello and if i want to change with all the li then we use for loop b/c it is store in an array.( and i don't know how to do it)???
+
+    // console.log(intro.length);   // it is giving undefine b/c it is not storing in array there is only one element which is ul
+    // intro.innerHTML = "Hello";
+
+
+</script>
+   
+    <!-- // case ---2***
+    // if we want to target child with the help of parent then ---- -->
+
+
+
+<ul id="first">
+    <li>list1</li>
+    <li>list2</li>
+    <li>list3</li>
+</ul>
+
+<ul>
+    <li>list a</li>
+    <li>list b</li>
+    <li>list c</li>
+
+</ul> 
+
+<script>
+    let new1 = document.getElementById("first");
+    // if want to change on first child element then ----
+// case ---2.1---***
+
+    // let new2 = new1.firstElementChild;
+    // new2.innerHTML = ("listA1");
+
+// if want to change on last child element then ----
+// case ---2.2 -----****
+
+// let new3 = new1.lastElementChild;
+// new3.innerHTML =("listC3");
+
+// case 2.3 ------****
+// if want to change all children element then ----
+
+// let new4 =new1.children;
+// new4.innerHTML =("listAll");
+
+// ( the above ) it is not applying b/c in new4 all the child is stored in array format so we have to apply array method in order to change anything.
+
+// we can see that with the help of console.log , that all the child are stored in array format.
+// console.log(new4);
+
+// for(let i =0; i<new4.length;i++){
+//     new4[i].innerHTML =("Hello");
+// }
+
+// case --2.4------****
+// now i want to insert three different values for three different li ----*** ????
+// i don't understant this below code i just ask chatGPT and she provide this code.may be i understand later.
+
+    // for (let i = 0; i < new4.length; i++) {
+    //     new4[i].innerHTML = "a";
+    //     new4[i].innerHTML = new4[i].innerHTML.replace("list" + (i + 1), "b");
+    // }
+
+
+</script>
+
+<!-- // case ---2.5 ----****
+// want to change sibling ----*** -->
+
+
+
+<!-- <ul >
+    <li>list1</li>
+    <li id="first">list2</li>
+    <li>list3</li>
+</ul>
+
+<ul>
+    <li>list a</li>
+    <li>list b</li>
+    <li>list c</li>
+
+</ul> -->
+
+<script>
+    // let node = document.getElementById("first");
+    // let node1 = node.previousElementSibling;
+
+    // first li in which  list 1 is present is  inside the node1 we can check with console.log and if we want to modified this we can do this.
+    // console.log(node1);
+    // node1.innerHTML = ("<li> listA1</li>");
+
+// case --2.6-----***
+// if want to access next element then ----
+
+//  let node = document.getElementById("first");
+//     let node1 = node.nextElementSibling;
+
+    // console.log(node1); 
+    // node1.innerHTML= ("<li> list C3</li>");
+</script>
+
+<!-- section --44 **** -->
+<!-- manipulate data with the help of js in html -->
+<!-- we do this with the help of innerHTML  -->
+<!-- we can fetch data of any tag with the help of innerHTML or we can modify the content of html tag with the help of innerHTML -->
+
+<!-- <div id="first">
+    <p id="p1">this is p tag</p>
+</div> -->
+<script>
+// let data1 = document.getElementById("first");
+// let content = data1.innerHTML;
+// console.log(content);
+
+//  the above we get (fetch) the content of a tag.
+// here above innerHTML is a property.
+
+// in below we set (modified) the content of a tag.
+// here below innerHTML is a method.
+
+// data1.innerHTML = "<h2> this is heading 2 </h2>";
+
+
+// <!-- section -45 create and append element -->*****
+
+// we can create an element and append means we can add element as a child element inside any parent element or we can directly add element inside body.
+
+
+// let dim = document.getElementById("first");
+// to create an element --****
+// let addH1 = document.createElement("h1");
+
+// if we want to creat class or id then we use this below ----
+// we can give multiple class name ,which is shown below---
+
+// addH1.className = "class1 class2";
+// addH1.id = "idName";
+
+// to create content we use this below -----
+// let text = document.createTextNode("this is h1 tag content");
+
+// now we have to append this text into h1 tag or in other words link it---
+// addH1.appendChild(text);
+
+// here above we use a method to add content into an element
+// if we want to add content into h1 tag with the help of a property then we use this below ---****
+
+// addH1.textContent = "this content is added with the help of a property name - textcontent"
+
+// we can see the content of any tag with this property----****
+
+// let new11 = document.getElementById("p1");
+// console.log(new11.textContent);
+
+
+
+
+// now the text is inside the h1 tag , now we have to append h1 into dim -----
+// dim.appendChild(addH1);
+
+// if i want to create this h1 tag in the body not in the div which has a id "first", so we do this way ----
+// let body1 = document.body;
+// body1.appendChild(addH1);
+
+// or 
+
+// document.body.appendChild(addH1);
+
+
+
+</script>
+
+</body>
+</html>

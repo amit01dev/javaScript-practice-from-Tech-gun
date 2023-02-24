@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- here we are selecting element with the help of tag name -->
+
+    <!-- <h2>heading1</h2>
+    <p>paragraph1</p>
+    <h2>heading2</h2>
+    <p>paragraph2</p>
+    <h2>heading3</h2>
+    <p>paragraph3</p> -->
+
+
+    <!-- case -1 -->
+
+    <!-- if we want to change in all h2 then  -->
+    
+    <script>
+    //  let new1 = document.getElementsByTagName("h2");
+
+     
+    //  console.log(new1);
+    //  new1.innerHTML = "hellow";
+// we can't change with the help of this new.innerHTML = "hello", b/c in new1 it is stored in the form of html-collection or we can say in array. we can see with the help of console.log(new1);
+// so we have to apply array method and to extract one by one from the array we use for loop here.
+
+
+// for(let i = 0; i<new1.length;i++){
+//     new1[i].innerHTML ="Hello";
+// }
+ 
+
+//           </script>
+
+
+
+<!-- case---2 -->
+
+<!-- now in 2nd case one h2 is present in normal condition but other two h2 is wraped inside a div and i want to change the content of only  h2 which is inside the div   -->
+
+<!-- <h2>heading1</h2>
+<p>paragraph1</p>
+
+<div id="divId">
+
+ <h2>heading2</h2>
+ <p>paragraph2</p>
+ <h2>heading3</h2>
+ <p>paragraph3</p>
+
+</div> -->
+
+<!-- in this condition we first target the id with document.getElementById=(divId) and wrap this into a variable(elm) and then we use this variable and apply                   let changeContent = elm.getElementsByTagName = ("h2") , 
+    
+    so now we are targeting  div which is having id divId and inside this div we are targeting all the tag name which has h2 and now we are manupulating the content inside the h2 tag with the help of changeContent.innerHTML ="Hello" this is inside the for loop; 
+
+and we apply for loop inside this b/c it is stored in array-->
+
+<!-- <script>
+    let new1 = document.getElementById("divId");
+    let changeContent= new1.getElementsByTagName("h2");
+    for(let i =0;i<changeContent.length;i++){
+        changeContent[i].innerHTML = ("Hello");
+    } -->
+<!-- </script> -->
+
+
+    <!-- *** new topic --- section -42 query selector  -->
+
+    <!-- query selector is capable of selecting any id , class, tag name with name means if we hava a 5 p tag and we have apply class ="intro" onto 3 p tag , so we can select all the p tag which have intro as a class, it doen't matter whether p tag is in local scope or in global scope -->
+
+    <!-- here below first p tag and last p tag which is inside div both are selected with this selector -->
+
+ <h2 class="intro">heading1</h2>
+<p class="intro">paragraph1</p>
+
+<div id="divId">
+
+ <h2 >heading2</h2>
+ <p>paragraph2</p>
+ <h2>heading3</h2>
+ <p class="intro">paragraph3</p>
+
+</div>
+
+<script>
+    let new1 =document.querySelector("p.intro")    // all the p tag with class =intro
+    // new1.innerHTML=("Hello");
+
+    
+
+// <!-- here above it is only targeting the one which is come first, it is not targing all the p tag which has intro as a class, b/c we don't use querySelectorAll( )
+    
+// to select all the p tag which has intro as a class , we do this which is showing below -->
+
+// let new1 = document.querySelectorAll("p.intro");
+
+
+// now new1.innerHTML is not working b/c it is store in the array. so we have to apply array method.
+
+// for(let i=0;i<new1.length;i++){
+//     new1[i].innerHTML =("Hello");
+// }
+
+
+// now it is targing p1 and p3.
+</script>
+ </body>
+ </html>
+
+ 

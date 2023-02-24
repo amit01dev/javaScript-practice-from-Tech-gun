@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <!-- section -50 insert adjacent HTML  ***** -->
+    <!-- it convert any text into HTML -->
+    <!-- it offers 4 positions from the id, class , tag name we selected -->
+
+    <!-- <div id="intro">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+    </div> -->
+
+   <script>
+    // four positions are --->>>
+    // beforebegin 
+    // afterbegin
+    // beforeend
+    // afterend
+    // let new1 = document.getElementById("intro");
+    // let newVariable = "<h1>this is h1 </h1>";
+    // // let new2 = new1.insertAdjacentHTML("beforebegin", newVariable);
+    // let new2 = new1.insertAdjacentHTML("afterend", newVariable);
+
+
+   </script> 
+
+<!-- <div id="intro" name ="boys">
+    this is a div. -->
+<!-- </div> -->
+
+<script>
+    // section - 51 --- modify attribute---***
+    // we can modify attribute by adding, removing, changing attribute
+    // id , class , name are the attributes,
+    
+    // to set a new attribute---****
+
+    // let new1 = document.getElementById("intro");
+    // new1.setAttribute("class", "school");
+
+    // to modify exiting attribute ----***
+    // new1.setAttribute("id", "newintro");
+
+    // to fetch exiting attribute value --- ( getAttribute)  ****
+    // let value = new1.getAttribute("name")
+    // console.log(value);
+
+    // to remove an attribute ----****
+    // new1.removeAttribute("name");
+
+    // to check whethere attribute value is present or not -----*****
+    // the output is in the form of bulleans ----
+
+    // let value = new1.hasAttribute("id");
+    // console.log(value);
+
+</script> 
+
+<!-- // section -- 51 **** change inline style  through js -->
+
+<!-- <button id="intro" style="color: aqua;"> send</button> -->
+
+<script>
+
+    // if we give style through attribute then it is called inline style****###
+    // it has three methods ---
+
+    // method -1
+    
+    // let new1 = document.getElementById("intro");
+
+    // this below is taking two arguments, in second argument we can add multiple properties
+
+    // new1.style.cssText = ("style", "background-color:aqua; color: red" );
+
+    // method -2 
+// it is also taking two arguments, in second argument we can add multiple properties---
+    // new1.setAttribute("style","background-color:aqua; color:red");
+
+    // metod -3
+// this method is  adding property one by one ---
+// new1.style.background = "aqua";
+// new1.style.color = "red";
+
+// ### important note is that when a property is already present in the html tag ( here style is present in button ) and if we use method 3 then nothing happended ,both the properties are applied but  here a catch is that these both properties should be diffrent , if we use same property on the both places then it will run the method 3 property.
+
+// ####  if we do this above same scnario with method 1 & 2 then they will overwrite it and only print the property which is present in method 1 & 2 , if we use same property or different property it doen't matter. 
+// to solve this above problem we use + before = --->>> new1.style.cssText += ("style", "background-color:aqua; color: red" );
+
+// + sign act as a concat operator and with the help of this we can print both properties one which is written in the html tag and the other which is written with the help of method 1. when we want to add multiple properties then we use this method 1.
+
+// ???? i don't understant what happen when use use + sign in above case ?
+</script>
+
+<!-- section - 53 get computed css  -->
+<!-- when we want to fetch css from internal css then we use this -->
+
+<button id="intro" style="color: aqua;"> send</button>
+
+<script>
+    // let select = document.getElementById("intro");
+    // let css = getComputedStyle(select);
+    // this above is giving all the css which is applied on html ( most css is applied on an html page in default mode or we can say predefine css is applied on html). 
+    
+    //  if we want to print a specific css property then we have use this below ---
+    // let css = getComputedStyle(select);
+    // console.log(css.color);
+
+
+    // ####**** in case we write css in internal css and in inline css then what happens ----
+    // in this case inline css get prority and it is applied on html and with the help of getcomputedstyle we can get css which is applied on the html , so we get css which is applied as in inline css.
+
+
+
+</script>
+</body>
+</html>
